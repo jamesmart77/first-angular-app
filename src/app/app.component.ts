@@ -1,10 +1,23 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/account">Account</a></li>
+          <li><a routerLink="/habitTracker">Habit Tracker</a></li>
+        </ul>
+      </nav>
+      <router-outlet></router-outlet>
+    </div>
+  `,
+  styles: [`h1 {
+    color: navy;
+  }`]
 })
 export class AppComponent {
-  title = 'egghead-angular';
+  
 }
